@@ -14,3 +14,4 @@ For the website, you will have to install [npm](https://www.npmjs.com/get-npm). 
 cd NTUition2018
 npm install
 ```
+Since the dataset is over GitHub's limit of 100MB, you will have to download the files from https://www.kaggle.com/account/login?ReturnUrl=%2fc%2f4458%2fdownload-all with a Kaggle/Gmail account. Put train.csv in your working directory.
