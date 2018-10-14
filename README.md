@@ -2,9 +2,15 @@
 
 Catch Fat Criminals uses Machine Learning to match a person's face, with how likely they are to commit crimes. Using this data, we can then identify potential criminals in a neighbourhood, but using image recognition software with the CCTVs around the area.
 
-# Dependencies
+# Getting Started
 
-For the website, you will have to install npm. Dependencies can be installed by calling the command
+Go to your preferred directory, and clone the repo.
 ```
+git clone https://github.com/chinzhiweiblank/NTUition2018.git
+```
+
+For the website, you will have to install [npm](https://www.npmjs.com/get-npm). Once done, install the dependencies.
+```
+cd NTUition2018
 npm install
 ```
