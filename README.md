@@ -41,3 +41,11 @@ The program will capture the faces of those in the video, and run the classifier
 
 If users want to add in new data sets, they can go to [http://localhost:8000](https://localhost:8000), and input some data using the form provided. Once sent, data will be sent to the API server, and processed, before sending it back to the app where it will be stored.
 
+The pre-trained model is in the filename.joblib.
+
+# Suggested Improvements
+1) Better Facial Recognition
+2) More comprehensive dataset for analysis
+3) Integrate with hardware such as autonomous drones or RCs or self-swivelling cameras
+4) Better models for prediction and higher accuracy
+5) Link up with surveillance videos to improve and assess accuracy in real life
