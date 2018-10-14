@@ -17,7 +17,7 @@ app.get("/", function(req, res){
 	res.sendFile("index.html");
 });
 
-app.post("/api", upload.single("jpeg"), function(req,res){
+app.post("/api", upload.single("img"), function(req,res){
 	var newEntry = new db.Crim();
 	var data = req.body;
 	for (var property in data){
@@ -47,7 +47,7 @@ app.get("/api", function(req, res){
 			}
 			res.send("Success");
 			request.post({
-				url : "http://172.22.194.27:5000/api/predict/",
+				url : "http://127.0.0.1:5000/api/predict/",
 				json : true,
 				body : data
 			});
