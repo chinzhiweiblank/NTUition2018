@@ -17,7 +17,7 @@ app.get("/", function(req, res){
 	res.sendFile("index.html");
 });
 
-app.post("/api", upload.single("img"), function(req,res){
+app.post("/api/data", upload.single("img"), function(req,res){
 	var newEntry = new db.Crim();
 	var data = req.body;
 	for (var property in data){
@@ -30,10 +30,9 @@ app.post("/api", upload.single("img"), function(req,res){
 	fs.unlinkSync(req.file.path);
 
 	res.send("Successfully send to DB");
-	//res.render("data", {data})
 });
 
-app.get("/api", function(req, res){
+app.get("/api/data", function(req, res){
 	db.Crim.find({}, (err, data) => {
 		if (err) res.send("Error");
 		else {
@@ -55,11 +54,4 @@ app.get("/api", function(req, res){
 	});
 });
 
-app.get("/clear", function(req, res){
-	db.Crim.deleteMany({}, (err) => {
-		if (err) console.log("Error");
-		else res.send("Success");
-	});
-});
-
-app.listen(8100, () => console.log("listening on 8100"));
+app.listen(8000, () => console.log("listening on 8000"));
