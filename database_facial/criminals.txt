@@ -1,0 +1,5 @@
+Gabriel Sze,High,0.96
+anthony,Low,0.20
+chenqiu,No Crime,0.5
+guohui,No Crime,0.9
+lester,High,0.7
