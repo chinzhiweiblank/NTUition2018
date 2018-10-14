@@ -1,2 +1,4 @@
-This branch contains the files necessary to load a mobilenet model trained by googlge zoo. 
+This branch contains the files necessary to load a mobilenet model trained by googlge zoo. Because of the size of the 
+protobuf file and github requirements, we cannot upload the files for mobilenet here. We need to download the file from 
+the link below
 Link of the model: https://medium.com/@madhawavidanapathirana/real-time-human-detection-in-computer-vision-part-2-c7eda27115c6
