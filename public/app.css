@@ -1,0 +1,40 @@
+html, body {
+	height: 100%;
+	margin: auto;
+	font-family: 'Abel', sans-serif;
+	background-color: #FFFFFF;
+}
+.btn-primary {
+	background-color: #C2DFE3;
+	border: #C2DFE3;
+}
+
+.btn-primary:hover {
+	background-color: #9DB4C0;
+}
+
+#custom-btn:active{
+   background-color:#9DB4C0;
+}
+
+.containing {
+	text-align: center;
+	margin: 20px 10%;
+}
+
+#submit {
+	background-color: #5C6B73;
+	border: none;
+}
+
+#submit:hover {
+	background-color: #253237;
+}
+
+#center {
+	font-family: 'Copse', serif;
+}
+
+*:focus {
+    outline: none;
+}

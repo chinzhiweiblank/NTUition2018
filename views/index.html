@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catch Fat Criminals</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./app.css">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Copse" rel="stylesheet">
+</head>
+<body>
+	<div class="containing">
+
+		<div class="container" id="container">
+
+            <h1 id="center">profile upload</h1>
+            <form action="http://172.22.194.27:5000/api/predict/" method="post" enctype="multipart/form-data">
+            	<div class="form-group">
+               	 <input type="file" name="jpeg" hidden="hidden" id="real-file">
+               	 <span style="color:#9DB4C0; padding-left: 5px" id="custom-text">No file chosen</span>
+               	 <button type="button" class="btn btn-primary btn-block" id="custom-btn">Upload a photo</button>
+                </div>
+                <div class="form-group">
+               	 <input class="form-control" type="text" placeholder="Name" name="Name">
+                </div>
+
+                <div class="form-group checklist">
+                	<select class="form-control" type="checklist" name="District">
+                		<option value="" disabled selected hidden>Please choose a location</option>
+                		<option value="BISHAN">Bishan</option>
+                		<option value="EAST COAST">East Coast</option>
+                		<option value="ANG MO KIO">Ang Mo Kio</option>
+                		<option value="TIONG BAHRU">Tiong Bahru</option>
+                		<option value="PASIR RIS">Pasir Ris</option>
+                		<option value="MARYMOUNT">Marymount</option>
+                		<option value="JOO KOON">Joo Koon</option>
+                		<option value="BEDOK">Bedok</option>
+                		<option value="CLARK QUAY">Clark Quay</option>
+                		<option value="YISHUN">Yishun</option>
+                	</select>
+                </div>
+                <div class="form-group">
+               		<input class="form-control" type="number" placeholder="Annual Salary" name="Annual Salary">
+                </div>
+                <div class="form-group checklist">
+                	<select class="form-control" type="checklist" name="Prior record">
+                		<option value="" disabled selected hidden>Please choose any prior records</option>
+                		<option value="ARREST, BOOKED">ARREST, BOOKED</option>
+                		<option value="NONE">NONE</option>
+                		<option value="ARREST, CITED">ARREST, CITED</option>
+                		<option value="PSYCHOPATHIC CASE">PSYCHOPATHIC CASE</option>
+                		<option value="JUVENILE BOOKED">JUVENILE BOOKED</option>
+                		<option value="UNFOUNDED">UNFOUNDED</option>
+                		<option value="EXCEPTIONAL CLEARANCE">EXCEPTIONAL CLEARANCE</option>
+                		<option value="LOCATED">LOCATED</option>
+                		<option value="CLEARED - CONTACT JUVENILE FOR MORE INFO">CLEARED - CONTACT JUVENILE FOR MORE INFO</option>
+                		<option value="NOT PROSECUTED">NOT PROSECUTED</option>
+                	</select>
+                </div>
+                <div class="form-group checklist">
+                	<select class="form-control" type="checklist" name="Education level">
+                		<option value="" disabled selected hidden>Please choose an education level</option>
+                		<option value="PRIMARY SCHOOL">PRIMARY SCHOOL</option>
+                		<option value="SECONDARY SCHOOL">SECONDARY SCHOOL</option>
+                		<option value="UNIVERSITY">UNIVERSITY</option>
+					</select>
+                </div>
+                <div class="form-group">
+                <button class="btn btn-primary btn-block " id="submit">Create</button>
+                </div>
+            </form>
+		</div>
+	</div>
+	<script type="text/javascript">
+               	 	const realBtn = document.getElementById("real-file");
+               	 	const fakeBtn = document.getElementById("custom-btn");
+               	 	const span = document.getElementById("custom-text");
+               	 	fakeBtn.addEventListener("click",function(){
+               	 		realBtn.click();
+               	 	});
+               	 	realBtn.addEventListener("change", function(){
+               	 		if(realBtn.value){
+               	 			span.innerHTML = realBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+               	 			span.setAttribute(
+               	 				"style", "color: #253237;")
+               	 		} else {
+               	 			span.innerHTML = "No file chosen";
+               	 		}
+
+               	 	})
+               	 </script>
+<script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
