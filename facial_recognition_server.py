@@ -51,7 +51,7 @@ def predict():
 		image = _preprocess_img(image)
 		print(type(image))
 		print(image.shape)
-		cv2.imwrite(rootPath+ '/database/images2.jpg',image)
+		cv2.imwrite(rootPath+ '/database_facial/images2.jpg',image)
 		return 'function successfully run , saved in local file'
 
 	except:
