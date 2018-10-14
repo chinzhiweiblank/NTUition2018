@@ -1,0 +1,3 @@
+This database contains sample images of individuals in the database. 
+The criminal.txt files stores the output of the prediction of whether the individual is a criminal in a txt file with columns
+of name, type of crime and probability of prediction
