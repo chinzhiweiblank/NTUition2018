@@ -23,6 +23,6 @@ CrimeClassifier.ipynb is a Jupyter notebook which describes how we managed to tr
 
 Facial Recognition.ipynb and Facial Recognition.py is what we use to detect the faces of people in the video.
 
-facial_recognition_server is the server used to handle API calls to the facial recognition module.
+facial_recognition_server.py is the server used to handle API calls to the facial recognition module.
 
 app.js is an Express app, used to render the landing page, where users can input data. It also handles the processed data (after classifiying the users) and stores it in a database.
